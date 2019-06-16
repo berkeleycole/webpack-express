@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+    <body>
+
+        <header>
+            <p>Test Site</p>
+        </header>
+
+        <main>
+            <h1>Natural Language Processing</h1>
+
+            <p>
+                Natural language processing (NLP) is a branch of artificial intelligence that helps computers understand, interpret and manipulate human language. NLP draws from many disciplines, including computer science and computational linguistics, in its pursuit to fill the gap between human communication and computer understanding.
+            </p>
+
+            <p>
+                The Aylien Text Analysis API provides powerful and flexible AI-driven content analysis solutions that bring the power of NLP to the masses. We help developers, data scientists, and marketers understand human-generated textual content at scale.
+            </p>
+
+            <h2>Try it out! Type in a statement to see what the Aylient NLP understands from it.</h2>
+
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input
+                    type="text"
+                    name="test-statement"
+                    value=""
+                    placeholder="John is a very good football player"
+                />
+                <input
+                    type="submit"
+                    name=""
+                    value="submit"
+                    onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)"
+                />
+            </form>
+
+            <section class="text-results">
+                <ul>
+                    <li>
+                        <h3>Text Polarity:</h3>
+                        <p id="polarity"></p>
+                        <h4>Confidence: </h4>
+                        <p id="polarity_confidence"></p>
+                    </li>
+
+                    <li>
+                        <h3>Text Subjectivity:</h3>
+                        <p id="subjectivity"></p>
+                        <h4>Confidence: </h4>
+                        <p id="subjectivity_confidence"></p>
+                    </li>
+                </ul>
+            </section>
+
+            <hr />
+
+            <h2>Or, try putting in the url of an article - like from your favorite news source.</h2>
+            <p>Watch out though, each of these requests take up 3 of your alloted 1000 API hits today</p>
+
+            <form class="">
+                <input
+                    type="url"
+                    name="test-url"
+                    value=""
+                    placeholder="https://www.news-source/a-news-article..."
+                />
+                <input
+                    type="submit"
+                    name=""
+                    value="submit"
+                    onclick="return Client.handleSubmitArticle(event)"
+                    onsubmit="return Client.handleSubmitArticle(event)"
+                />
+            </form>
+
+            <section class="url-results">
+                <ul>
+                    <li>
+                        <h3>Text Polarity:</h3>
+                        <p id="polarity"></p>
+                        <h4>Confidence: </h4>
+                        <p id="polarity_confidence"></p>
+                    </li>
+
+                    <li>
+                        <h3>Text Subjectivity:</h3>
+                        <p id="subjectivity"></p>
+                        <h4>Confidence: </h4>
+                        <p id="subjectivity_confidence"></p>
+                    </li>
+
+                    <h3>Text Excerpt:</h3>
+                    <p id="excerpt"></p>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+
+    <script type="text/javascript" src="bundle.min.js"></script></body>
+</html>
